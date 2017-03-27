@@ -17,12 +17,13 @@ distance = 0
 homestatus = 0
 energystatus = 1
 
+# RUN/WALK TRACKER + ENERGY PLUGIN 
 while (homestatus == 0) && (energystatus == 1)
   puts "Are you running or walking?"
   speed = gets.chomp
 if energy <= 0
   energystatus -= 1
-  puts "you are out of energy"
+  puts "you are out of energy, for your safety we suggest taking a break and walking the #{distance} kilometres home"
 elsif speed == "running"
   distance += 5
   energy -= 2
@@ -30,7 +31,7 @@ elsif speed == "running"
 elsif speed == "run"
   distance += 5
   energy -=2
-  puts "You are currently #{distance}km from home, type home to stop egergy #{energy}"
+  puts "You are currently #{distance}km from home, type home to stop"
 elsif speed == "walking"
   distance += 1
   energy += 1
