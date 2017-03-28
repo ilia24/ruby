@@ -18,7 +18,7 @@ elsif name <= 10
 end
 
 unless trump == true
-  puts "fuckin run"
+  puts "Run away"
 end
 
 
